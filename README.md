@@ -1,3 +1,0 @@
-# UBI
-
-Universal Base Image
