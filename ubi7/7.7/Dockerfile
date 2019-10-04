@@ -4,6 +4,7 @@ LABEL name="ubi7"
 LABEL version="7.7"
 LABEL com.redhat.license_terms="https://www.redhat.com/licenses/eulas"
 LABEL dcar_status="pendingapproval"
+LABEL test="taylorwashere"
 
 COPY dsop-fix*.sh /
 
