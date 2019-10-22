@@ -8,7 +8,7 @@ LABEL dcar_status="approved"
 COPY dsop-fix*.sh /
 
 RUN chmod +x /dsop-fix-{1,2}.sh && for i in $(ls /dsop-fix-{1,2}.sh); do sh ${i}; done
-RUN yum update -y --disablerepo unified_platform_ubi8_appstream --disablerepo unified_platform_ubi8_os && rm -rf /var/cache/yum/ /var/tmp/* /tmp/* /var/tmp/.???* /tmp/.???*
+RUN yum update -y --disableplugin=subscription-manager && rm -rf /var/cache/yum/ /var/tmp/* /tmp/* /var/tmp/.???* /tmp/.???*
 RUN chmod +x /dsop-fix-3.sh && for i in $(ls /dsop-fix-3.sh); do sh ${i}; done && rm -rf /dsop-fix*.sh
 
 ENV container oci

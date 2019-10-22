@@ -45,7 +45,7 @@ done
 # BEGIN fix (3 / 24) for 'xccdf_org.ssgproject.content_rule_security_patches_up_to_date'
 ###############################################################################
 (>&2 echo "Remediating rule 3/24: 'xccdf_org.ssgproject.content_rule_security_patches_up_to_date'")
-yum -y update
+yum -y update --disableplugin=subscription-manager
 # END fix for 'xccdf_org.ssgproject.content_rule_security_patches_up_to_date'
 
 ###############################################################################
@@ -1150,7 +1150,7 @@ if which dnf ; then
   fi
 elif which yum ; then
   if ! rpm -q --quiet "$package"; then
-    yum install -y "$package"
+    yum install -y "$package" --disableplugin=subscription-manager
   fi
 elif which apt-get ; then
   apt-get install -y "$package"
@@ -1194,7 +1194,7 @@ if which dnf ; then
   fi
 elif which yum ; then
   if ! rpm -q --quiet "$package"; then
-    yum install -y "$package"
+    yum install -y "$package" --disableplugin=subscription-manager
   fi
 elif which apt-get ; then
   apt-get install -y "$package"
@@ -1258,7 +1258,7 @@ if which dnf ; then
   fi
 elif which yum ; then
   if ! rpm -q --quiet "$package"; then
-    yum install -y "$package"
+    yum install -y "$package" --disableplugin=subscription-manager
   fi
 elif which apt-get ; then
   apt-get install -y "$package"
@@ -1322,7 +1322,7 @@ if which dnf ; then
   fi
 elif which yum ; then
   if ! rpm -q --quiet "$package"; then
-    yum install -y "$package"
+    yum install -y "$package" --disableplugin=subscription-manager
   fi
 elif which apt-get ; then
   apt-get install -y "$package"
@@ -1392,7 +1392,7 @@ if which dnf ; then
   fi
 elif which yum ; then
   if ! rpm -q --quiet "$package"; then
-    yum install -y "$package"
+    yum install -y "$package" --disableplugin=subscription-manager
   fi
 elif which apt-get ; then
   apt-get install -y "$package"
