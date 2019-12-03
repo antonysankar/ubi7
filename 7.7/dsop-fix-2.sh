@@ -45,7 +45,7 @@ done
 # BEGIN fix (3 / 24) for 'xccdf_org.ssgproject.content_rule_security_patches_up_to_date'
 ###############################################################################
 (>&2 echo "Remediating rule 3/24: 'xccdf_org.ssgproject.content_rule_security_patches_up_to_date'")
-yum -y update --disableplugin=subscription-manager
+yum -y update --enableplugin=subscription-manager
 # END fix for 'xccdf_org.ssgproject.content_rule_security_patches_up_to_date'
 
 ###############################################################################
